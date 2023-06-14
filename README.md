@@ -1,14 +1,8 @@
 # dummyjson-front-app
 
-This template should help get you started developing with Vue 3 in Vite.
+A VueJs 3 front app for consuming datas from [dummyjson.com](https://dummyjson.com).
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+See it in production : [dummyjson-front-app.netlify.app](https://dummyjson-front-app.netlify.app)
 
 ## Project Setup
 
