@@ -1,9 +1,38 @@
 <script setup>
+  import { ref } from 'vue'
   import { RouterLink, RouterView } from 'vue-router'
+
+  import AuthModal from './components/AuthModal.vue'
+
+  const authModalSeen = ref(false)
+
+  const user = ref(null)
+
 </script>
 
 <template>
   <header>
+    <div id="top" class="bg-light text-end w-100">
+      <span v-if="user">
+        {{ user.username }}
+        <a href="#" @click="user = null">
+          Logout
+        </a>
+      </span>
+
+      <span v-else>
+        <a href="#" @click="authModalSeen = ! authModalSeen">
+          Login
+        </a>
+      </span>
+
+      <AuthModal
+        @login="(loggedUser) => user = loggedUser"
+        @close="authModalSeen = false"
+        v-show="authModalSeen"
+      />
+    </div>
+
     <h1 class="text-center">DummyJson front app</h1>
 
     <div class="wrapper">
